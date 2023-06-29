@@ -1,0 +1,87 @@
+{
+  "studentDetails": [
+    {
+      "id": 1,
+      "number": "1",
+      "registerNo": "4112",
+      "firstName": "Thanusha",
+      "lastName": "Jaya",
+      "email": "thanu@gmail.com",
+      "dob": "1997",
+      "phone": "0774125563"
+    },
+    {
+      "id": 2,
+      "number": "3",
+      "registerNo": "4115",
+      "firstName": "Nirosh",
+      "lastName": "Nathan",
+      "email": "ni@gmail.com",
+      "dob": "1991",
+      "phone": "0772584963"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Akalya Gnana",
+      "email": "akal@gmail.com",
+      "password": "AK97",
+      "mobile": 778489654,
+      "id": 1
+    },
+    {
+      "fullname": "Milux Tharma",
+      "email": "milux@gmail.com",
+      "password": "1234",
+      "mobile": 774141236,
+      "id": 2
+    },
+    {
+      "fullname": "Milux Tharma",
+      "email": "mil",
+      "password": "1234",
+      "mobile": 774141236,
+      "id": 3
+    }
+  ],
+  "courseDetails": [
+    {
+      "id": 1,
+      "num": "1",
+      "course": "HND",
+      "duration": "3 Year",
+      "fees": "200 000"
+    },
+    {
+      "id": 2,
+      "num": "2",
+      "course": "BSc",
+      "duration": "1 Year",
+      "fees": "600 000"
+    },
+    {
+      "id": 3,
+      "num": "3",
+      "course": "DTECH",
+      "duration": "6 Month",
+      "fees": "500 000"
+    },
+    {
+      "id": 4,
+      "num": "4",
+      "course": "Diploma English",
+      "duration": "6 Month",
+      "fees": "800 000"
+    },
+    {
+      "id": 5,
+      "num": "5",
+      "course": "Law",
+      "duration": "2 Year",
+      "fees": "1000 000"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

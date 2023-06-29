@@ -1,0 +1,27 @@
+<nav class="navbar navbar- bg-light">
+    <div class="container-fluid">
+      <h1 style="color: rgb(0, 5, 10);">Student Management</h1>
+      <div class="d-flex">
+        <!--Pages button-->
+        <button [routerLink]="['../home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+          type="button" class="btn btn-outline-info mt-5">Home</button>
+        <button [routerLink]="['../students']" routerLinkActive="active" type="button"
+          class="btn btn-outline-info mt-5 mx-3">Students</button>
+        <button [routerLink]="['../course']" routerLinkActive="active" type="button"
+          class="btn btn-outline-info mt-5 ">Courses</button>
+  
+        <button [routerLink]="['../login']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+          type="button" class="btn btn-outline-info mt-5 mx-3 ">Logout</button>
+        <!--Pages button-->
+        <!--Add buttons-->
+        <!--
+        
+        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success">Add
+          Students</button>
+        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success mx-3">Add
+          Course</button>-->
+        <!--Add buttons-->
+  
+      </div>
+    </div>
+  </nav>

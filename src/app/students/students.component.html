@@ -1,0 +1,167 @@
+<app-navbar></app-navbar>
+
+<!--Table -->
+
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Register No</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of studentsData">
+      <td>{{row.number}}</td>
+      <td>{{row.registerNo}}</td>
+      <td>{{row.firstName}}</td>
+      <td>{{row.lastName}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.dob}}</td>
+      <td>{{row.phone}}</td>
+      <td>
+        <button (click)="onEdit(row)" type="button" data-toggle="modal" data-target="#exampleModal"
+          class="btn btn-info">Edit</button>
+        <button (click)="deleteStudent(row)" class="btn btn-danger mx-3">Delete</button>
+      </td>
+    </tr>
+    <!--end table-->
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Student Detail</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--...-->
+
+            <!--Form start-->
+
+            <form [formGroup]="formValue" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&onSubmit()">
+
+              <div class="form-group mb-3">
+                <label>Number</label>
+                <input type="text" formControlName="number" class="form-control" placeholder="">
+
+                <span class="text-danger"
+                  *ngIf="formValue.controls['number'].dirty && formValue.hasError('required','number')">
+                  *number is required
+                </span>
+              </div>
+              <div class="form-group mb-3">
+                <label for="registerNo">Register Number</label>
+                <input type="text" formControlName="registerNo" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['registerNo'].dirty && formValue.hasError('required','registerNo')">
+                  *registerNo is required
+                </span>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['firstName'].dirty && formValue.hasError('required','firstName')">
+                  *First name is required
+                </span>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['lastName'].dirty && formValue.hasError('required','lastName')">
+                  *Last name is required
+                </span>
+              </div>
+
+
+
+
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="text" formControlName="email" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['email'].dirty && formValue.hasError('required','email')">
+                  *email is required
+                </span>
+              </div>
+
+
+
+
+
+
+              <div class="form-group mb-3">
+                <label for="dob">Date Of Birth</label>
+                <input type="text" formControlName="dob" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['dob'].dirty && formValue.hasError('required','dob')">
+                  *DOB is required
+                </span>
+              </div>
+
+
+
+
+
+
+
+              <div class="form-group mb-3">
+                <label for="phone">Phone</label>
+                <input type="text" formControlName="phone" class="form-control" placeholder="">
+                <span class="text-danger"
+                  *ngIf="formValue.controls['phone'].dirty && formValue.hasError('required','phone')">
+                  *Phone is required
+                </span>
+              </div>
+
+
+
+
+              <!---->
+              <!---->
+
+            </form>
+            <!--Form start-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" *ngIf="showAdd" (click)="postStudentDetails()" class="btn btn-primary">Add</button>
+            <button type="button" *ngIf="showUpdate" (click)="updateStudentDetails()"
+              class="btn btn-primary">Update</button>
+            <!-- [disabled]="!formValue.valid" -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <div class="d-flex">
+      <button (click)="clickAddStudent()" type="button" data-toggle="modal" data-target="#exampleModal"
+        class="btn btn-outline-success mt-5">Add Students</button>
+    </div>
+
+
+
+
+    <!--Child-->
+
+
+    <!-- <app-course (newMessageEvent)="reciveMessage($event)"></app-course>
+
+    <ul>
+    <li *ngFor="let message of message">{{message}}</li>
+    </ul> -->
