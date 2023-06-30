@@ -43,7 +43,7 @@
           </span>
     </div>
 
-    <button type="button" class="btn btn-primary mt-3" (click)="postUserDetails()">SignUp</button>
+    <button type="button" class="btn btn-primary mt-3" (click)="postUserDetails()" [disabled]="!signUpForm.valid">SignUp</button>
     <!-- [disabled]="!signUpForm.valid" -->
     <br>
     <a  routerLink="/login" >Already have an account?</a>
