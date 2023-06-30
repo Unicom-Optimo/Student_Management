@@ -7,7 +7,7 @@
 <table class="table mt-5">
   <thead>
     <tr>
-      <th scope="col">No</th>
+      <th scope="col">Number</th>
       <th scope="col">Course</th>
       <th scope="col">Duration</th>
       <th scope="col">Fees</th>
@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let row of courseData">
-      <td>{{row.num}}</td>
+      <td>{{row.number}}</td>
       <td>{{row.course}}</td>
       <td>{{row.duration}}</td>
       <td>{{row.fees}}</td>
@@ -46,8 +46,8 @@
             <form [formGroup]="courseForm">
 
               <div class="form-group mb-3">
-                <label for="no">No</label>
-                <input type="text" formControlName="num" class="form-control" placeholder="">
+                <label for="number">Number</label>
+                <input type="text" formControlName="number" class="form-control" placeholder="">
 
               </div>
 
@@ -58,7 +58,7 @@
               </div>
 
               <div class="form-group mb-3">
-                <label for="duration">Name</label>
+                <label for="duration">Duration</label>
                 <input type="text" formControlName="duration" class="form-control" placeholder="">
               </div>
 

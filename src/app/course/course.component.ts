@@ -39,7 +39,7 @@ export class CourseComponent implements OnInit {
 
   ngOnInit(): void {
     this.courseForm = this.formbuilder.group({
-      num: [''],
+      number: [''],
       course: [''],
       duration: [''],
       fees: ['']
@@ -64,7 +64,7 @@ export class CourseComponent implements OnInit {
 
   //post
   postCourseDetails() {
-    this.courseModelObj.num = this.courseForm.value.num;
+    this.courseModelObj.number = this.courseForm.value.number;
     this.courseModelObj.course = this.courseForm.value.course;
     this.courseModelObj.duration = this.courseForm.value.duration;
     this.courseModelObj.fees = this.courseForm.value.fees;
@@ -123,7 +123,7 @@ export class CourseComponent implements OnInit {
     this.showUpdate = true;
 
     this.courseModelObj.id = row.id;
-    this.courseForm.controls['num'].setValue(row.num);
+    this.courseForm.controls['number'].setValue(row.number);
     this.courseForm.controls['course'].setValue(row.course);
     this.courseForm.controls['duration'].setValue(row.duration);
     this.courseForm.controls['fees'].setValue(row.fees);
@@ -134,7 +134,7 @@ export class CourseComponent implements OnInit {
   updateCourseDetails() {
     // this.studentsModelObj.number=this.formValue.value.number;
 
-    this.courseModelObj.num = this.courseForm.value.num;
+    this.courseModelObj.number = this.courseForm.value.number;
     this.courseModelObj.course = this.courseForm.value.course;
     this.courseModelObj.duration = this.courseForm.value.duration;
     this.courseModelObj.fees = this.courseForm.value.fees;

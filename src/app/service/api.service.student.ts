@@ -22,8 +22,6 @@ export class ApiService {
       }))
   }
 
-
-
   updateStudent(data: any, id: number) {
     return this.http.put<any>("https://localhost:7253/api/StudentsModels/" + id, data)//http://localhost:3000/studentDetails/
       .pipe(map((res: any) => {
