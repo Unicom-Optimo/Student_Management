@@ -8,5 +8,6 @@ namespace StudentsManagement.Models
 
         public DbSet<StudentsModel> studentModel { get; set; }
         public DbSet<CourseModule> courseModules { get; set; }
+        public DbSet<UserModel> userModels { get; set; }
     }
 }

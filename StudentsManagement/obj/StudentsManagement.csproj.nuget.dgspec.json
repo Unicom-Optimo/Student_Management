@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.NET workspace\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj": {}
+    "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj": {}
   },
   "projects": {
-    "E:\\.NET workspace\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj": {
+    "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.NET workspace\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj",
+        "projectUniqueName": "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj",
         "projectName": "StudentsManagement",
-        "projectPath": "E:\\.NET workspace\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj",
+        "projectPath": "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\.NET workspace\\StudentsManagement\\StudentsManagement\\obj\\",
+        "outputPath": "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
