@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
@@ -14,22 +13,21 @@ export class SignupComponent implements OnInit {
   public signUpForm!: FormGroup;
 
 
-   //validation
- formdata = { fullname: "", userName: "", password: "", mobile: "" ,userType: "" }
- submit = false;
+  //validation
+  formdata = { fullName: "", userName: "", password: "", mobile: "", userType: "" }
+  submit = false;
 
   signupModelObj: SignupModel = new SignupModel();
   signupData !: any; //get
 
 
-  constructor(private formBuilder: FormBuilder, private api: ApiServiceSignup, private http: HttpClient, private router: Router) {
-
+  constructor(private formBuilder: FormBuilder, private apiSignup: ApiServiceSignup, private router: Router) {
 
   }
 
   ngOnInit(): void {
     this.signUpForm = this.formBuilder.group({
-      fullname: ['', Validators.required],
+      fullName: ['', Validators.required],
       userName: ['', Validators.required],
       password: ['', Validators.required],
       mobile: ['', Validators.required],
@@ -38,30 +36,27 @@ export class SignupComponent implements OnInit {
 
   }
 
-
-
   //post
   postUserDetails(){
-    this.signupModelObj.fullname = this.signUpForm.value.fullname;
+    this.signupModelObj.fullName = this.signUpForm.value.fullName;
     this.signupModelObj.userName = this.signUpForm.value.userName;
     this.signupModelObj.password = this.signUpForm.value.password;
     this.signupModelObj.mobile = this.signUpForm.value.mobile;
     this.signupModelObj.userType = this.signUpForm.value.userType;
-    this.api.postUser(this.signupModelObj)
-
-      .subscribe(res => {
-        console.log(res);
-        alert("User Added Successfully")
-        let ref = document.getElementById("cancle")
-        ref?.click();
-        this.signUpForm.reset();
-
-      },
-        err => {
-          alert("Something went wrong")
-        }
-
-      )
+    this.apiSignup.postUser(this.signupModelObj).subscribe(res => {
+      console.log(res);
+      alert("User Added Successfully")
+      let ref = document.getElementById("cancle")
+      ref?.click();
+      this.signUpForm.reset();
+      // alert("SignUp Successfully");
+      // this.signUpForm.reset();
+      this.router.navigate(['login']);
+    },
+      err => {
+        alert("Something went wrong")
+      }
+    )
   }
 
   // onSubmit(){

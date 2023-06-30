@@ -1,6 +1,6 @@
 export class SignupModel {
     id: number = 0;
-    fullname: string = '';
+    fullName: string = '';
     userName: string = '';
     password: string = '';
     mobile: string = '';

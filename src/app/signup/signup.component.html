@@ -4,8 +4,8 @@
 
     <div class="form-group mt-3">
         <label for="fullName">Full Name</label>
-        <input formControlName="fullname"    type="text" id="fullname" class="form-control">
-        <span class="text-danger" *ngIf="signUpForm.controls['fullname'].dirty && signUpForm.hasError('required','fullname')">
+        <input formControlName="fullName"    type="text" id="fullName" class="form-control">
+        <span class="text-danger" *ngIf="signUpForm.controls['fullName'].dirty && signUpForm.hasError('required','fullName')">
             *Full Name is required
           </span>
     </div>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-group mt-3">
-        <label for="pass">Password</label>
+        <label for="password">Password</label>
         <input formControlName="password" type="password" class="form-control" >
         <span class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
             *Password is required
@@ -28,7 +28,7 @@
 
     <div class="form-group mt-3">
         <label for="mobile">Mobile</label>
-        <input formControlName="mobile"   type="number" id="mobile" class="form-control">
+        <input formControlName="mobile"   type="text" id="mobile" class="form-control">
         <span class="text-danger" *ngIf="signUpForm.controls['mobile'].dirty && signUpForm.hasError('required','mobile')">
             *Mobile is required
           </span>
@@ -43,12 +43,8 @@
           </span>
     </div>
 
-
-    
-
-
-
-    <button type="submit" class="btn btn-primary mt-3" (click)="postUserDetails()" [disabled]="!signUpForm.valid">SignUp</button>
+    <button type="button" class="btn btn-primary mt-3" (click)="postUserDetails()">SignUp</button>
+    <!-- [disabled]="!signUpForm.valid" -->
     <br>
     <a  routerLink="/login" >Already have an account?</a>
 
