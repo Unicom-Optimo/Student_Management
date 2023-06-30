@@ -9,7 +9,7 @@ export class ApiService2 {
   constructor(private http: HttpClient) { }
 
   postCourse(data: any) {
-    return this.http.post<any>("https://localhost:7253/api/CourseModules", data)
+    return this.http.post<any>("https://localhost:7253/api/CourseModules", data)//new commit
       .pipe(map((res: any) => {
         return res;
       }))
