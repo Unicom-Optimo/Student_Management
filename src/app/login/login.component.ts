@@ -28,17 +28,17 @@ public loginForm!:FormGroup
   }
   ngOnInit(): void {
     this.loginForm=this.formBuider.group({
-      email:['',Validators.required],
+      userName:['',Validators.required],
       password:['',Validators.required]
     })
   }
-
+//
 
   login(){
-this.http.get<any>("http://localhost:3000/signupUsers")
+this.http.get<any>("https://localhost:7253/api/UserModels")//http://localhost:3000/signupUsers
 .subscribe(res=>{
   const user=res.find((a:any)=>{
-    return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
+    return a.userName===this.loginForm.value.userName && a.password===this.loginForm.value.password
   });
   if(user){
     alert("Login Success");

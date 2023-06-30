@@ -19,17 +19,17 @@ reciveMessage(newMessage: string) {
   this.message.push(newMessage);
 }
 
-  //validation
-  formdata = { number: "", registerNo: "", firstName: "", lastName: "" ,email: "" ,dob: "" ,phone: "" }
-  submit = false;
-
-
   isChild = false;
   channelName = '';
 
+ //validation
+ formdata = { number: "", registerNo: "", firstName: "", lastName: "" ,email: "" ,dob: "" ,phone: "" }
+ submit = false;
 
-  formValue !: FormGroup; //angForm
 
+  formValue !: FormGroup; //ngForm
+
+  
   submitted = false;
   studentsModelObj: StudentsModel = new StudentsModel();
   studentsData !: any; //get

@@ -1,15 +1,30 @@
 
-<form class="mt-5" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+<form class="mt-5" [formGroup]="signUpForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&onSubmit()">
     <h4>Signup</h4>
 
     <div class="form-group mt-3">
         <label for="fullName">Full Name</label>
-        <input formControlName="fullname"    type="text" id="fName" class="form-control">
+        <input formControlName="fullname"    type="text" id="fullname" class="form-control">
         <span class="text-danger" *ngIf="signUpForm.controls['fullname'].dirty && signUpForm.hasError('required','fullname')">
             *Full Name is required
           </span>
     </div>
 
+    <div class="form-group mt-3">
+        <label for="userName">User Name</label>
+        <input formControlName="userName"    type="text" id="userName" class="form-control">
+        <span class="text-danger" *ngIf="signUpForm.controls['userName'].dirty && signUpForm.hasError('required','userName')">
+            *User Name is required
+          </span>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="pass">Password</label>
+        <input formControlName="password" type="password" class="form-control" >
+        <span class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
+            *Password is required
+          </span>
+    </div>
 
     <div class="form-group mt-3">
         <label for="mobile">Mobile</label>
@@ -21,25 +36,19 @@
 
 
     <div class="form-group mt-3">
-        <label for="email">Email Address</label>
-        <input  formControlName="email"  type="email" id="email" class="form-control">
-        <span class="text-danger" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">
-            *email is required
+        <label for="userType">User Type</label>
+        <input  formControlName="userType"  type="text" id="userType" class="form-control">
+        <span class="text-danger" *ngIf="signUpForm.controls['userType'].dirty && signUpForm.hasError('required','userType')">
+            *User Type is required
           </span>
     </div>
 
 
-    <div class="form-group mt-3">
-        <label for="pass">Password</label>
-        <input formControlName="password" type="password" class="form-control" >
-        <span class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
-            *Password is required
-          </span>
-    </div>
+    
 
 
 
-    <button type="submit" class="btn btn-primary mt-3" [disabled]="!signUpForm.valid">SignUp</button>
+    <button type="submit" class="btn btn-primary mt-3" (click)="postUserDetails()" [disabled]="!signUpForm.valid">SignUp</button>
     <br>
     <a  routerLink="/login" >Already have an account?</a>
 
