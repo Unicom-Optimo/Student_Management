@@ -1,9 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using StudentsManagement.Migrations;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentsManagement.Models
 {
     public class StudentsModel
     {
+        //Mapping
+       /* public StudentsModel()
+        {
+            this.courses = new HashSet<CourseModule>();
+        }*/
+
         [Key]
         public int id { get; set; }
         public int number { get; set; }
@@ -13,5 +20,9 @@ namespace StudentsManagement.Models
         public string? email { get; set; }
         public string? dob { get; set; }
         public string? phone { get; set; }
+
+
+        //Mapping
+       // public virtual ICollection<CourseModule> courses { get; set; }
     }
 }
