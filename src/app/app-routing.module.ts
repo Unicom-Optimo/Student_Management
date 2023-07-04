@@ -5,20 +5,28 @@ import { StudentsComponent } from './students/students.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuardServiceService } from './service/auth-guard-service.service';
-
+import { AuthguardServiceService } from './authguard-service.service';
 
 const routes: Routes = [
-  { path: '',redirectTo:'login', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,canActivate:[AuthGuardServiceService] },
-  { path: 'course', component: CourseComponent ,canActivate:[AuthGuardServiceService] },
-  { path: 'students', component: StudentsComponent,canActivate:[AuthGuardServiceService] },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  // { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent ,canActivate:[AuthGuardServiceService] }
+  { path: 'home', component: HomeComponent, canActivate: [AuthguardServiceService] },
+  { path: 'course', component: CourseComponent, canActivate: [AuthguardServiceService] },
+  { path: 'students', component: StudentsComponent, canActivate: [AuthguardServiceService] },
+  { path: 'signup', component: SignupComponent }
+
+  //   {path: '',canActivateChild: [AuthguardServiceService],
+  //    children: [
+  //   { path:'home', component: HomeComponent },
+  //   { path:'students', component: StudentsComponent }
+  // ]
+  // },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  // providers:[AuthGuardServiceServic]
 })
 export class AppRoutingModule { }

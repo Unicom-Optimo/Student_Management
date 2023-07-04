@@ -43,8 +43,29 @@
           </span>
     </div>
 
-    <button type="button" class="btn btn-primary mt-3" (click)="postUserDetails()" [disabled]="!signUpForm.valid">SignUp</button>
-    <!-- [disabled]="!signUpForm.valid" -->
+
+    <div class="form-group mt-3">
+        <label for="token">Token</label>
+        <input  formControlName="token"  type="text" id="token" class="form-control">
+        <span class="text-danger" *ngIf="signUpForm.controls['token'].dirty && signUpForm.hasError('required','token')">
+            *token Type is required
+          </span>
+    </div>
+
+
+    <div class="form-group mt-3">
+        <label for="email">Email</label>
+        <input  formControlName="email"  type="email" id="email" class="form-control">
+        <span class="text-danger" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">
+            *email Type is required
+          </span>
+    </div>
+
+
+
+    <button type="button" class="btn btn-primary mt-3"  (click)="postUserDetails()" [disabled]="!signUpForm.valid">SignUp</button>
+    <!-- [disabled]="!signUpForm.valid" 
+    -->
     <br>
     <a  routerLink="/login" >Already have an account?</a>
 
