@@ -5,4 +5,6 @@ export class SignupModel {
     password: string = '';
     mobile: string = '';
     userType: string = '';
+    token: string = '';
+    email: string = '';
 }

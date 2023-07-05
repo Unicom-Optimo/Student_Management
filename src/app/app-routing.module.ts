@@ -5,16 +5,18 @@ import { StudentsComponent } from './students/students.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuardServiceService } from './service/auth-guard-service.service';
-
+import { AuthenticationGuard } from './authenticaton.guard';
 
 const routes: Routes = [
-  { path: '',redirectTo:'login', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,canActivate:[AuthGuardServiceService] },
-  { path: 'course', component: CourseComponent ,canActivate:[AuthGuardServiceService] },
-  { path: 'students', component: StudentsComponent,canActivate:[AuthGuardServiceService] },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  // { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent ,canActivate:[AuthGuardServiceService] }
+  { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard] },
+  { path: 'course', component: CourseComponent, canActivate: [AuthenticationGuard] },
+  { path: 'students', component: StudentsComponent, canActivate: [AuthenticationGuard] },
+  { path: 'signup', component: SignupComponent }
+
 ];
 
 @NgModule({
