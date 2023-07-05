@@ -6,18 +6,20 @@ import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Router } from '@angular/router';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthguardServiceService {
- 
-  private baseUrl:string = "https://localhost:7253/";
+
+
+  private baseUrl: string = "https://localhost:7253/";
 
   constructor(
     private http: HttpClient,
     private _router: Router
-  ) 
-  {}
+  ) { }
+
 
   signUp(userObj: any) {
     return this.http.post<any>
@@ -27,12 +29,13 @@ export class AuthguardServiceService {
 
 
   login(loginObj: any) {
+
     // return this.http.post('https://localhost:7253/api/UserModels/authenticate', loginObj);  //https://localhost:7253/api/UserModels/authenticate
 
     return this.http.post(this.baseUrl + 'api/UserModels/authenticate', loginObj).pipe(
-            map((res: Response) => res),
-            catchError((err: Response) => this.onError(err))
-          );
+      map((res: Response) => res),
+      catchError((err: Response) => this.onError(err))
+    );
   }
 
 
@@ -45,7 +48,7 @@ export class AuthguardServiceService {
     const error = res;
     return throwError(error);
   }
-  
+
 
 
 }
@@ -82,5 +85,6 @@ export class AuthguardServiceService {
 
 
 // }
+
 
 

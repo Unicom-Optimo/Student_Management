@@ -11,9 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AuthguardServiceService } from './authguard-service.service';
-import { AuthenticationGuard } from './authenticaton.guard';
-
 
 @NgModule({
   declarations: [
@@ -32,10 +29,7 @@ import { AuthenticationGuard } from './authenticaton.guard';
     ReactiveFormsModule, //new
     HttpClientModule//new
   ],
-  providers: [
-    AuthenticationGuard,
-  AuthguardServiceService
-],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
