@@ -11,5 +11,7 @@ namespace StudentsManagement.Models
         public String? password { get; set; }
         public String? mobile { get; set; }
         public String? userType { get; set; }
+        public string? Token { get; set; }
+        public String  email { get; set; }
     }
 }

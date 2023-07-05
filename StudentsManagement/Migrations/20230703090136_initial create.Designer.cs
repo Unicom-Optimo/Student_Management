@@ -12,8 +12,8 @@ using StudentsManagement.Models;
 namespace StudentsManagement.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20230630045643_User")]
-    partial class User
+    [Migration("20230703090136_initial create")]
+    partial class initialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,6 +91,9 @@ namespace StudentsManagement.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("fullName")
                         .HasColumnType("nvarchar(max)");

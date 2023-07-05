@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using StudentsManagement.Models;
 
@@ -118,6 +119,26 @@ namespace StudentsManagement.Controllers
         private bool UserModelExists(int id)
         {
             return (_context.userModels?.Any(e => e.id == id)).GetValueOrDefault();
+        }
+
+
+        //LOGIN
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> Authenticate([FromBody] UserModel userObj)
+        {
+            if(userObj == null)
+            
+                return NotFound();
+
+                var user= await _context.userModels.FirstOrDefaultAsync(x=>x.userName== userObj.userName && x.password== userObj.password);
+                if(user == null)
+                    return NotFound(new {Message="User Not Found"});
+
+                return Ok(new
+                {
+                    Message = "Login succcess"
+                });
+            
         }
     }
 }

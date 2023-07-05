@@ -506,3 +506,4 @@ E:\WorkspaceGit\StudentsManagement\StudentsManagement\obj\Debug\net7.0\refint\St
 E:\WorkspaceGit\StudentsManagement\StudentsManagement\obj\Debug\net7.0\StudentsManagement.pdb
 E:\WorkspaceGit\StudentsManagement\StudentsManagement\obj\Debug\net7.0\StudentsManagement.genruntimeconfig.cache
 E:\WorkspaceGit\StudentsManagement\StudentsManagement\obj\Debug\net7.0\ref\StudentsManagement.dll
+E:\WorkspaceGit\StudentsManagement\StudentsManagement\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,4 +1,4 @@
-﻿using StudentsManagement.Migrations;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace StudentsManagement.Models

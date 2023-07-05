@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Lh6cqpCv235Ym0or1ZtdxNZpVJjFo2dbw02pJpC96Wq/DY2yrFLPhkrGeb+aK7XQowgAQpmZM8YNJseCgnTWKw==",
+  "dgSpecHash": "LCUOBMRk1zGiEHTrAZOCLiy3qRUdr95twbV2Vn6wASno1JFH2DZRLsKEJTk6eeR5veN76sV9K2UOhnKE4LERuw==",
   "success": true,
   "projectFilePath": "E:\\WorkspaceGit\\StudentsManagement\\StudentsManagement\\StudentsManagement.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.8\\microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
